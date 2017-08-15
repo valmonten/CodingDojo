@@ -1,0 +1,172 @@
+/*CSS reset settings here*/
+*{
+ margin: 0px;
+ padding: 0px;
+  /* outline: 1px dotted green;  */
+}
+#wrapper{
+ width: 970px;
+ background: radial-gradient(silver 5%, #6c5661 60%, black 90%);
+ margin: 0px auto;
+ font-family: Helvetica, sans-serif
+   /* padding: 20px;   */
+}
+
+h1{
+    margin-left: 20px;
+    padding: 5px;
+    display: inline;
+}
+
+h3{
+    display: inline;
+    text-align: right;
+    padding-left: 350px;
+}
+
+.right{
+    text-align: right;
+}
+
+#header{
+ height: 50px;
+ width: 970px; 
+ margin: 0px;
+ background-color: #fbfbfb; 
+}
+
+.blocks{
+    background: linear-gradient(to right, white , #dacbd9);
+    height: 280px;
+    width: 475px;
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top;
+    /* padding: 10px; */
+}
+
+.pad{
+    padding: 10px;
+}
+
+.blocks:first-of-type{
+    margin-right: 0px;
+    border: 5px white;
+    width: 420px;
+    height: 270px;
+}
+
+
+
+.subcontents{
+ height: 600px;
+ width: 293px;
+ background: linear-gradient(to right, white , #dacbd9);
+ display: inline-block;
+ margin: 20px;
+ margin-left: 0px;
+ vertical-align: top;
+ 
+}
+
+ .subcontents:first-of-type{
+    margin: 20px;
+} 
+
+#me{
+    height: 270px;
+    width: auto;
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
+}
+
+#mid{
+    width: 970px;
+    height: 640px;
+}
+h2{
+    padding: 5px; 
+    background: linear-gradient(darkgray, gray, darkgray);
+    color: white;
+} 
+
+#top{
+    width: 970px;
+    display: block;
+}
+.blocks p{
+    
+    margin-bottom: 10px;
+    
+}
+
+div.knobs{
+    /* vertical-align: bottom; */
+    height: 300px;
+    width: 293px;
+    display: block;
+
+}
+
+h4{
+    background: linear-gradient(darkgray, gray, darkgray);
+    padding:5px;
+    color: white;
+}
+
+img{
+    display: inline-block;
+    height: 40px;
+    width: auto;
+}
+div.details>img{
+    width: 293px;
+    height: auto;
+
+}
+.details p{
+    font-size: 11pt;
+    text-align: justify;
+    margin: 5px;
+    height:166px;
+}
+.knoblines{
+    margin: 10px;
+    margin-left: 0px;
+    
+}
+.knoblines:first-of-type{
+    margin-bottom: 0px;
+
+}
+
+.knoblines img{
+    margin: 10px 10px 10px 0px;
+
+}
+.knoblines img:first-of-type{
+    margin: 10px;
+
+}
+
+.footer{
+    background-color: #fbfbfb;
+    height: 50px;
+    width: 970px; 
+    margin: 0px;
+    text-align: center;
+    text-decoration: underline;
+}
+button{
+    display:block;
+    margin: 0px auto;
+    color:white;
+    background-color: darkgreen;
+    padding: 5px;
+    border-radius: 10px;
+}
+.footer img{
+    height:15px;
+    width: auto;
+}
