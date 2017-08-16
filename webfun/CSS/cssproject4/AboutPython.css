@@ -13,6 +13,30 @@
 #header{
  height: 150px;
  margin-bottom: 20px;
+ display: inline-block;
+}
+
+.righthead{
+    margin-left: 650px;
+}
+
+.search{
+    background-color: gray;
+    border-radius: 20px;
+    height:60px;
+    width:250px;
+}
+.search input{
+    margin:20px 0px 20px 30px;   
+}
+
+.textsize{
+    margin-left: 80px;
+    font-size: 10pt;
+    color: white;   
+}
+.search button{
+    border-radius: 5px;
 }
 #navigation{
     height: 25px;
@@ -53,6 +77,11 @@
     color: white;
     margin-left:60px;
     list-style-position: inside;
+    font-size: 14pt;
+}
+.nav2 li{
+    margin-bottom:10px;
+    text-decoration: underline;
 }
  .tmblock{
     width: 600px;
