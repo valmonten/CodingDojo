@@ -1,8 +1,204 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* outline: 1px green solid; */
 }
 
 #wrapper{
-    background: linear-gradient(gray,white);
+    background: linear-gradient(#e3e3e3,white,white);
+    width: 970px;
+    margin: 0px auto;
+}
+
+header{
+    background-color: white;
+}
+
+header img{
+    height: 60px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -18px;
+}
+
+header h1{
+    display: inline;
+    font-weight: normal;
+}
+header h2{
+    color: white;
+    background: linear-gradient(#2969a0,#4e80aa,#2969a0);
+    font-weight: normal;
+    padding: 10px;
+}
+
+#leftads{
+    display: inline-block;
+    vertical-align: top;
+    width: 160px;
+    padding: 10px;
+    padding-top: 20px;
+    
+}
+
+span{
+    color:#079ab0;
+}
+
+#leftads h5{
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+#leftads h6{
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.internet{
+    color: darkred;
+}
+
+#leftads button{
+    width: 150px;
+    display: block;
+    border-radius: 6px;
+    height: 35px;
+    color: white;
+}
+.whatis{
+    border-bottom: solid black 1px;
+}
+.whatis button{
+    background: linear-gradient(#699cc6,#23659F);
+    margin: 0px auto;  
+   
+}
+.whatis button:last-of-type{
+    background: linear-gradient(#eba951,#f07400);
+    margin-bottom: 20px;
+   
+}
+.reinvent{
+    background-image: url(ad_background.png);
+    color:white;
+    text-align: center;
+    height: 250px;
+    padding: 20px 10px 0px 10px;
+    width: 150px;
+    font-weight: normal;
+    font-size: 12pt;
+    margin-top: 20px;
+}
+
+.reinvent img{
+    height: auto;
+    width: 75px;
+}
+.reinvent button{
+    margin: 0px auto;
+    background: linear-gradient(#79d0df,#00c1df);
+}
+
+#body{
+    display: inline-block;
+    width: 700px;
+    margin-left: 30px;
+    margin-top: 10px;
+
+}
+.explanation{
+    margin-top: -50px;
+    border-top: solid 1px gray;
+    padding-top: 10px;
+}
+.explanation ul{
+    margin-left: 30px;
+}
+.homedns{
+    display: inline-block;
+    width:100px;
+    height: 30px;
+}
+.contactinfo img{
+    height: 20px;
+    width: auto;
+}
+.contactinfo{
+    
+    display: inline-block;
+}
+.phone{
+    display: inline-block;
+}
+.phone img{
+    height: 50px;
+    width: auto;
+    display: inline-block;
+}
+.rightcontact{
+    display: inline-block;
+    margin-left: 500px;
+    height: 131px;
+    width: 300px;
+    vertical-align: top;
+    margin-top: -30px;
+}
+.numbers{
+    display: inline-block;
+    /* text-align: right; */
+}
+.numbers p{
+    vertical-align: top;
+}
+h4{
+    color:#388ad0;
+    padding-bottom: 5px;
+}
+
+.explanation img{
+    width:300px;
+    height: auto;
+    margin-left: 200px;
+}
+
+.explanation ol{
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.big3 img{
+    width: 100px;
+    height: auto;
+    display: inline;
+    margin:10px;
+}
+ .big3{
+    display: inline;
+    width:120px;
+    height:104px;
+} 
+.explanation2{
+    display: inline-block;
+    width: 460px;
+}
+.border{
+    border-top: solid 3px #2969a0;
+    border-left: solid 3px #2969a0;
+    border-right: solid 3px #2969a0;
+}
+a{
+    text-decoration: none;
+}
+.bignumber{
+    color:#00bfdf;
+    font-size: 18pt;
+    padding-left: 0px
+}
+.right{
+    padding-left: 10px;
+    font-size: 10pt;
+}
+.right:last-of-type{
+    font-size:8pt;
 }
