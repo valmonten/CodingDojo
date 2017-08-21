@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OH PICK ME PICK ME!</title>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $(document).on("click",".adduser", function(){
+                $("tbody").append("<tr>");
+                $("tbody").append("<td>"+ $(".firstname").val()+ "</td>");
+                $("tbody").append("<td>"+ $(".lastname").val()+ "</td>");
+                $("tbody").append("<td>"+ $(".email").val()+ "</td>");
+                $("tbody").append("<td>"+ $(".number").val()+ "</td></tr>");
+
+                // alert("OUCH! Quit clicking me!");
+                return false;
+            });
+        // for(class in form){
+        //     console.log(class);
+        // }
+            // $(".adduser").click(function(){
+            //     $("tbody").append("<tr><td>"+ $(".firstname").val()+ "</td></tr>");
+            // });
+        });
+    </script>
+    <link rel="stylesheet" href="Users.css">
+</head>
+<body>
+    <div id="wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email Address</th>
+                    <th>Contact #</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr> -->
+            </tbody>
+        </table>
+        <form>
+            First Name:
+            <input type="text" class="firstname">
+            Last Name:
+            <input type="text" class="lastname">
+            Email:
+            <input type="text" class="email">
+            Contact Number:
+            <input type="text" class="number">
+            <input class="adduser" type="submit" value="Add User">
+        </form>
+    </div>    
+</body>
+</html>

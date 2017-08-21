@@ -1,0 +1,23 @@
+input{
+    display:block;
+}
+textarea{
+    display: block;
+}
+form{
+    display: inline-block;
+}
+
+div{
+    display: inline-block;
+    margin:20px;
+    vertical-align: top;
+    background-color:darkorange;
+    padding:10px;
+    text-align: center;
+    border: 3px solid black;
+}
+
+h2{
+    display:none;
+}

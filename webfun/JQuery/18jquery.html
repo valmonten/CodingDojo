@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        console.dir($);
+        $(document).ready(function(){
+            // $( "button" ).click(function() {
+            //     $( "h1" ).fadeOut();
+            //   });
+            // $("h1").click(function(){
+            //     $("button").show();
+            // });
+            $(".fadein").click(function(){
+                $("h1").fadeIn();
+            });
+            $(".fadeout").click(function(){
+                $("h1").fadeOut();
+            });
+            $("h1").addClass('blue');
+            $("h1").click(function(){
+                $(this).before("<h1>Tada!! </h1>");
+            });
+        });
+
+    </script>
+    <style>
+        .blue{
+            color: fuchsia;
+        }
+    </style>
+    
+
+    
+</head>
+<body>
+    <h1>Easy choices</h1>
+    <button type="button" class="fadein">FadeIn</button>
+    <button type="button" class="fadeout">Fadeout</button>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>ConTACT</title>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+                $(document).on("click", ".add", function(){
+                    $("body").append("<div><h1>"+$(".firstname").val()+"</h1>"+"<h1>"+$(".lastname").val()+"</h1><h1>CLICK ME!</h1><h2>"+$(".description").val()+"</h2></div>");
+                        return false;
+                    });
+                
+                
+                $(document).on("click","div",function(){
+                        $(this).children().toggle();
+
+                   
+                });
+                 
+            });
+
+        </script>
+        <link rel="stylesheet" href="contactcard.css">
+    
+
+    
+    </head>
+    <body>
+        <form >
+            First Name:
+            <input type="text" class="firstname">
+            Last Name:
+            <input type="text" class="lastname">
+            Descripton:
+            <textarea class="description"></textarea>
+            <!-- <input type="text" class="" -->
+            <input type="submit" class="add" value="Nice to Meet You">
+
+        </form>
+    </body>
+</html>

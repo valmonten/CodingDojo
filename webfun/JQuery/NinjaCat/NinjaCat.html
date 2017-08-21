@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NinjaCats!</title>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        console.dir($);
+        $(document).ready(function(){
+            $('img').click(function(){
+                $(this).attr({src:$(this).attr('data-alt-src')});
+            });
+            $('img').click(function() {
+            console.log('data-alt-src value is', );
+            });
+            // $('button').click(function(){
+            //     $("img").show();
+            // });
+        });
+    </script>
+    <link rel="stylesheet" href="NinjaCat.css">
+</head>
+<body>
+    <div id="wrapper">
+        <img src="img/cat0.png" alt="Cat0" data-alt-src='img/ninja0.png'>
+        <img src="img/cat1.png" alt="Cat1" data-alt-src='img/ninja1.png'>
+        <img src="img/cat2.png" alt="Cat2" data-alt-src='img/ninja2.png'>
+        <img src="img/cat3.png" alt="Cat3" data-alt-src='img/ninja3.png'>
+        <img src="img/cat4.png" alt="Cat4" data-alt-src='img/ninja4.png'>
+
+
+    </div>    
+</body>
+</html>
