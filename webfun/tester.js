@@ -15,10 +15,13 @@
 //     }
 //         else { counter ++; }
 // }
-for(i=0; i<=2017; i++;) {
-    if(i%400===0) {
-        console.log(i)
-        console.log("Leap Year")
+function countdown(num){
+    var array = [];
+    for (var i=num; i>=0;i--){
+        array.push(i);
     }
-
+    console.log(array);
+    return array;
 }
+
+countdown(-39);

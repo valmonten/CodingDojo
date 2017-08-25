@@ -12,7 +12,7 @@ div{
     display: inline-block;
     margin:20px;
     vertical-align: top;
-    background-color:darkorange;
+    /* background-color:darkorange; */
     padding:10px;
     text-align: center;
     border: 3px solid black;

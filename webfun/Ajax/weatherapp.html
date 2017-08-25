@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('form').submit(function() {
+                    // your code here (build up your url)
+                    $.get('http://api.openweathermap.org/data/2.5/weather?q='+
+                        $('.location').val()
+                        +'&&appid=9ba2c1e4bbaf2c8b53d86f9288ab0181', function(res) {
+                        // $('button').click(function(){
+                            console.log(res.main.temp);
+                            $('body').append("<h1>"+$('.location').val()+"</h1><h3>Temperature:"+(Math.floor(9*(res.main.temp)/5 - 459.67))+"</h3>");
+                            // console.log('Working?')
+                        // });
+                    }, 'json');
+                    // don't forget to return false so the page doesn't refresh
+                    return false;
+                    
+                });
+            });
+
+        </script>
+        <!-- <link rel="stylesheet" href="Users.css"> -->
+        
+
+        
+    </head>
+    <body>
+        <form action="">
+            <label>Location:</label>
+            <input class="location" name="location" type="text">
+            <input type="submit" value="Brrrr">
+
+        </form>
+
+        
+    </body>
+</html>

@@ -12,18 +12,48 @@
         <script type="text/javascript">
 
             $(document).ready(function(){
-                $(document).on("click", ".add", function(){
-                    $("body").append("<div><h1>"+$(".firstname").val()+"</h1>"+"<h1>"+$(".lastname").val()+"</h1><h1>CLICK ME!</h1><h2>"+$(".description").val()+"</h2></div>");
+                var count=0;
+                function generatecard(){
+
+                
+
+                        
+                        $("body").append("<div class ='color"+count+"'><h1>"+$(".firstname").val()+"</h1>"+"<h1>"+$(".lastname").val()+"</h1><h1>CLICK ME!</h1><h2>"+$(".description").val()+"</h2></div>");
+                        $(".color"+count).css('background-color', random_color());
+                        count++;
                         return false;
-                    });
-                
-                
+                        
+                };
+                $(document).on("click", ".add", function(){
+                    generatecard();
+                    return false;
+                });    
                 $(document).on("click","div",function(){
                         $(this).children().toggle();
 
                    
                 });
-                 
+                function random_color()
+               {
+                  var rgb = ['a','b','c','d','e','f','0','1','2','3','4','5','6','7','8','9'];
+                  color = '#'  //this is what we'll return!
+                  for(var i = 0; i < 6; i++) 
+                  {
+                     x = Math.floor((Math.random()*16))
+                     color += rgb[x]; 
+                  }
+                  return color;
+               }
+               $('body').css('background-color', random_color());
+
+               $("form.githubform").submit(function(e){
+                    e.preventDefault()
+                    console.log("submitted github form", e.target.childNodes[3].value)
+                    $.get("https://api.github.com/users/marboga", function(data){
+                        console.log(data);
+                        
+                    })
+               });
             });
 
         </script>
@@ -43,6 +73,11 @@
             <!-- <input type="text" class="" -->
             <input type="submit" class="add" value="Nice to Meet You">
 
+        </form>
+        <form class="githubform" method="get" action="">
+            <label for="username">Search Github by username</label>
+            <input id="username" type="text" name="username" value="">
+            <input type="submit" value="Search" name="">
         </form>
     </body>
 </html>

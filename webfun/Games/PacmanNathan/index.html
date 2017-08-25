@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Pacman Demo</title>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            // List of features to build:
+            // Have pacman move
+            // Secret door or teleporter
+            // When win run off the screen
+            // Rotate Pacman when moving different directions
+            // Have Pacman go backwards when eats shroom and change colors and lose coins when picking them up
+            // Pacman RPG
+            $(document).ready(function(){
+                var world =[
+                    [2,2,2,2,2,2,2,2,2,2],
+                    [2,0,1,1,1,1,1,1,1,2],
+                    [2,1,1,2,1,1,2,1,1,2],
+                    [2,1,1,1,1,1,1,1,1,2],
+                    [2,1,2,1,0,0,1,2,1,2],
+                    [2,1,1,2,1,1,2,1,1,2],
+                    [2,1,1,1,2,2,1,1,1,2],
+                    [2,1,1,1,1,1,1,1,1,2],                   
+                    [2,2,2,2,2,2,2,2,2,2]
+                ];
+                var score =0;
+                var pacman = {
+                    x: 1,
+                    y: 1
+                };
+                var size=20;
+                function displayworld(){
+                    var output="";
+                    for(var i=0; i<world.length;i++){
+                        output+="<div class='row'>"
+                        for(var j=0; j<world[i].length; j++){
+                            if(world[i][j]==2){
+                                output+="<div class='brick'></div>"
+                            }    
+                            else if(world[i][j]==1){
+                                output+="<div class='coin'></div>"
+                            }
+                            if(world[i][j]==0){
+                                output+="<div class='empty'></div>"
+                            }    
+                            
+                        }output+="</div>"
+                    }
+                    console.log(output);
+                    document.getElementById('world').innerHTML =output;
+                }
+                function displaypacman(){
+                    document.getElementById('pacman').style.top=pacman.y*size+"px";
+                    document.getElementById('pacman').style.left=pacman.x*size+"px";
+                }
+                function displayscore(){
+                    document.getElementById('score').innerHTML = score;
+                    
+                }
+                displayworld();
+                displaypacman();
+                document.onkeydown = function(e){
+                    var angle =0;
+
+                    if(e.keyCode==37){
+                        // angle=180;
+                        // $("#pacman").rotate(angle);
+                        if(world[pacman.y][pacman.x-1]!==2){
+                        pacman.x--;
+                        }
+                    }
+                    else if(e.keyCode==39){
+                        // angle=0;
+                        // $("#pacman").rotate(angle);
+                        if(world[pacman.y][pacman.x+1]!==2){
+                        pacman.x++;
+                        }
+                    }
+                    else if(e.keyCode==38){
+                        if(world[pacman.y-1][pacman.x]!==2){
+                        pacman.y--;
+                        }
+                    }
+                    else if(e.keyCode==40){
+                        if(world[pacman.y+1][pacman.x]!==2){
+                        pacman.y++;
+                        }
+                    }
+                    if(world[pacman.y][pacman.x]==1){
+                        world[pacman.y][pacman.x] =0;
+                        score+=10
+                        if (score==450){
+                            // $("div.brick").hide();
+                            $("#pacman").css({"height":"200px"});
+                            $("#pacman").css({"width":"200px"});
+                            $("#pacman").css({"background-size":"200px auto"});
+                            size=200;
+                            world =[
+                    [2,2,2,2,2,2,2,2,2,2],
+                    [2,3,0,0,0,0,0,0,0,0],
+                    [2,0,0,0,0,0,0,0,0,0],
+                    [2,0,0,0,0,0,0,0,0,0],
+                    [2,0,0,0,0,0,0,0,0,0],
+                    [2,0,0,0,0,0,0,0,0,0],
+                    [2,0,0,0,0,0,0,0,0,0],
+                    [2,0,0,0,0,0,0,0,0,0],                  
+                    [2,0,0,0,0,0,0,0,0,0]
+                ];
+                        }
+                    if(world[pacman.y][pacman.x]==3){
+                        $("body").html("<h1>YOU WIN!!!</h1>");
+                    }
+                        displayworld();
+                        displayscore();
+                    }
+                    if(world[pacman.y][pacman.x]==3){
+                        $("body").html("<h1>YOU WIN!!!</h1>");
+                    }
+                    displaypacman();
+                }
+            });
+
+        </script>
+
+        <style type="text/css">
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        body{
+            background-color: black
+        }
+            div.row div{
+                width: 20px;
+                height: 20px;
+                /* border: 1px solid black; */
+                display: inline-block;
+                margin-bottom:-4px;
+                padding:0px;
+            }
+            /* div#world{
+                position:relative;
+            } */
+            div.brick{
+                background-color: blue;
+                margin:0px;
+                padding:0px;
+            }
+            div#pacman{
+                background: url('pac.gif');
+                background-size: 17px auto;
+                background-repeat: no-repeat;
+                background-position: center;
+                width:20px;
+                height:20px;
+                position: absolute;
+                margin:0px;
+                padding:0px;
+            }
+            div.coin{
+                background: url('shrooms.gif');
+                background-size: 15px auto;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin:0px;
+                padding:0px;
+            }
+            div.empty{
+
+            }
+            #score{
+                border: 1px solid white;
+                width:30px;
+                height:30px;
+                color:white;
+                padding: 7px;
+                text-align: center;
+                display:inline-block;
+                margin-left: 300px;
+                margin-top: 100px;
+            }
+            h1{
+                color:white;
+                text-align: center;
+                font-size: 60pt;
+                margin-top:100px;
+                font-family: VT323, sans-serif;
+            
+            }
+        </style>
+
+        
+    </head>
+    <body>
+        <div id="container">
+            <div id="world"></div>
+            <div id="pacman"></div>
+            <div id="score">0</div>
+        </div>
+            
+        
+    </body>
+</html>

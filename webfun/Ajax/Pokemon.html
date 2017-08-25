@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+                for (let i=1; i<=151;i++){
+                    // Shows pokemon picture
+                    $(".pokeholder").append("<img id='pokemon"+i+"' src='http://pokeapi.co/media/img/"+i+".png' alt='pokemon"+i+"'>");
+                    var name
+                    var height
+                    var weight
+                    // Populates pokedex when clicked
+                    $("#pokemon"+i).click(function(){
+                        // When clicked from function above, gets information about that pokemon and saves in variables
+                        $.get('http://pokeapi.co/api/v1/pokemon/'+i+'/', function(res){
+                            name=(res.name);
+                            height=(res.height);
+                            weight=(res.weight);
+                                //When clicked from above, creates html for pokemon information
+                                $("div.pokedex").html(
+                                '<img src="http://pokeapi.co/media/img/'+i+'.png" alt="pokemon'+i+'">'+
+                                '<h1>'+ name+ '</h1>'+
+                                '<h2>Types</h2>');;
+                                $("div.pokedex").append('<ul>')
+                                //Loops through pokemon types
+                                for(var j=0; j<res.types.length;j++){
+                                    $("div.pokedex").append('<li>'+res.types[j].name+'</li>')
+                                }
+                                $("div.pokedex").append('</ul>');
+                                $("div.pokedex").append('<h2>Height</h2><p>'+height+'</p>'+
+                                '<h2>Weight</h2><p>'+weight+'</p>');
+
+
+                        }, 'JSON');
+                        console.log(name);
+
+
+                    });
+                }
+                        
+            });
+                 
+
+
+        </script>
+        <style>
+        
+        .pokeholder{
+            width: 700px;
+            display: inline-block;
+            }
+            .pokedex{
+                width: 230px;
+                margin:20px;
+                border: 10px solid red;
+                height: 500px;
+                display: inline-block;
+                vertical-align: top;
+                position: fixed;
+                padding:20px;
+            }
+        </style>
+        <!-- <link rel="stylesheet" href="Users.css"> -->
+    
+
+    
+    </head>
+    <body>
+        <div class="pokeholder"></div>
+        <div class="pokedex">
+            <h1>POKE WHAT!?</h1>
+        </div>
+
+    
+    </body>
+</html>

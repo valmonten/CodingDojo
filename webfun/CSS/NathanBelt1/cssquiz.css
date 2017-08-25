@@ -1,0 +1,199 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: Arial, Helvetica, sans-serif
+    
+}
+body{
+    background-color: black;
+    margin:0px auto;
+    width:970px;
+    /* outline: 2px white solid;  Try with this border! It makes it look super fresh and fly*/
+    padding: 0px 5px;
+}
+
+
+header{
+    height: 100px;
+    color: white;
+    width:970px;
+    background-color: #1a1a1a;
+    
+}
+
+header img{
+    margin: 20px;
+    display: inline-block;
+}
+header h3{
+    margin-left: 500px;
+    display: inline-block;
+    margin-top: 40px;
+    height: 100px;
+    vertical-align: top;
+    font-size: 12pt;
+}
+
+#navbar{
+    background: linear-gradient(#545454,#252525);
+    height: 30px;
+    padding: 15px 10px 5px 30px;
+
+    
+}
+.small{
+    font-size: 6pt;
+    display: inline;
+    color: #a3a4a2;
+    padding-bottom: 20px;
+    font-weight: 900;
+
+}
+#navbar h4{
+    color:#a3a4a2;
+    display: inline;
+    margin:30px;
+    margin-left: 0px;
+ 
+}
+#navbar h4:first-of-type{
+  
+    color: white;
+}
+
+
+#splash img{
+    width:970px;
+    height: auto;
+    margin: 2px 0px -3px 0px;
+    border-bottom: 5px solid #3b3b3b;
+}
+#options{
+    background-color: #1a1a1a;
+}
+.left{
+    display: inline-block;
+    margin: 20px 10px;
+    margin-left: 0px;
+    width: 220px;
+    height:100px;
+    vertical-align: top;
+
+}
+.left:first-of-type{
+    margin: 20px 10px;
+}
+.left h3{
+    width: 160px;
+    display: inline-block;
+    vertical-align: top;
+    color:#df802c;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.left p{
+    margin-left:50px;
+    color:white;
+    font-size: 9pt;
+}
+#info{
+    background: repeating-linear-gradient(
+        -45deg,
+        #080808,
+        #080808 3px,
+        #202020 1px,
+        #202020 4px
+      );
+}
+.sales{
+    margin: 30px 20px;
+    width: 600px;
+    display: inline-block;
+}
+
+.sales h2{
+    color:white;
+    margin-bottom: 20px;
+}
+.sales p{
+    color:white;
+    font-size: 10pt;
+}
+.buynow{
+    width: 300px;
+    display: inline-block;
+    align-content: right;
+    vertical-align: top;
+    height: 100px;
+}
+.buynow button{
+    margin-left: 150px;
+    margin-top: 30px;
+    width: 120px;
+    height: 40px;
+    background: linear-gradient(#f29a59,#f2802c);
+    font-size: 14pt;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    
+}
+.bothead h4{
+    color: white;
+    display:inline;
+    font-size: 16pt;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bothead p{
+    color:#df802c;
+    font-style: italic;
+    display: inline;
+    margin-left: 680px;
+    vertical-align: top;
+}
+
+#bot{
+    padding:20px 0px 20px 20px;
+    background-color: #1a1a1a;
+}
+.right{
+    display: inline-block;
+    width: 211px;
+    vertical-align: top;
+    
+    margin: 10px;
+}
+.right2{
+    display: inline-block;
+    width: 211px;
+    vertical-align: top;
+   
+    margin: 10px;
+    margin-left:0px;
+}
+
+.right img, .right2 img{
+    border: #373737 3px solid;
+}
+
+.right h5, .right2 h5{
+    color:white;
+    font-size: 15pt;
+    color:#df802c;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.right p, .right2 p{
+    color: white;
+    display: inline;
+    font-size: 9pt;
+}
+.hideandseek{
+    color:#494949;
+    margin: 25px 0px -15px 850px;
+    background-color: #1a1a1a;
+    font-size: 8pt;
+}
