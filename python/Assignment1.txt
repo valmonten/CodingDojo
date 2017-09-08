@@ -1,0 +1,7 @@
+Installed Django,
+Showed what is installed with python
+Tried installing Django again but it says it is already satisfied
+pip freeze shows just python frameworks
+Pip unininstall Django was not working and would cause the terminal to stop working
+Pip show Django showed Django was still there
+Pip search Flask showed everything involved with the Flask framework
