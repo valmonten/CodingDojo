@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guess the Game!</title>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        console.dir($);
+        $(document).ready(function(){
+            if ($('h3').html() == "Your guess was too low"){
+                $('#response').show();
+            }
+            else if ($('h3').html() == "Your guess was too high"){
+                $('#response').show();
+            }
+            else if($('h3').html()>" "){
+                $('#response').show();
+                $('#response').css("background-color", "green");
+                $('#replay').show();
+                $('.first').hide();
+            }
+        //     $('img').click(function(){
+        //         $(this).hide();
+        //     });
+        //     $('button').click(function(){
+        //         $("img").show();
+        //     });
+        });
+    </script>
+    <style type='text/css'>
+        body{
+            width: 900px;
+            margin:auto;
+        }
+        #wrapper{
+            width: 500px;
+            margin: 0px, auto;
+        }
+        h1{
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+            color:white;
+            font-size: 30pt;
+        }
+        form{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        #replay{
+            display: none;
+        }
+        #response{
+            background-color:red;
+            padding:100px;
+            display:none;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- <p>Guesses so far: {{count}}</p> -->
+    <div id="wrapper">
+        <h1>Guessing Game!</h1>
+        <p>Try to guess what the number is between 1 and 100</p>
+        <div id="response">
+            <h3>{{message}}</h3>
+            <form action="/replay" method="POST">
+                <input id="replay" type="submit" value="Play Again" name="replay">
+            </form>
+        </div>
+        <p>{{rando}}</p>
+        <form action="/guess" method="POST">
+            <!-- <p>{{rando}}</p> -->
+            <input class="first" type="text" name="guess" placeholder="55">
+            <input class="first" type="submit" name="submit" value="Guess!">
+        </form>
+    </div>
+</body>
+</html>

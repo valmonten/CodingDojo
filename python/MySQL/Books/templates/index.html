@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title></title>
+        <description></description>
+        <meta charset='utf-8'>
+        <script type='text/javascript' src= ></script>
+        <link rel='stylesheet' type='text/css' href=''>
+        <style>
+        div{
+            display: inline-block;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>My Books</h1>
+        <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Date Added</th>
+            <th>Action</th>
+        </tr>
+
+        
+
+               {% for book in thingys %}
+                <tr>
+                <td>{{ book['title'] }}</td>
+                <td>{{ book['author'] }}</td>
+                <td>{{ book['created_at'] }}</td>
+                <td><a href="/destroy/{{book['id']}}">delete</a></td>
+                </tr>
+               {% endfor %}
+        </table>
+        <form action="/add" method=''>
+        <input type="submit" value="Add a book">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>THE WALL</title>
+    <style>
+        div{
+            display:inline-block;
+            vertical-align: top;
+            width: 300px;
+            height: 250px;
+            align-content: right;
+        }
+        label{
+            display:block;
+            margin-bottom: 10px;
+            align-content: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Top of the morning to you! Login or register!</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <div>
+        <h2>Register:</h2>
+        <form action="/register" method="post">
+            <label for="first_name">First name:<input type="text" name="first_name"></label>
+            <label for="last_name">Last name:<input type='text' name='last_name'></label>
+            <label for="email">Email:<input type='text' name='email'></label>
+            <label for="password">Password:<input type='password' name='password'></label>
+            <label for="confirm">Confirm password:<input type='password' name='confirm'></label>
+            <input type="submit" value='Register'>
+        </form>
+    </div>
+    <div>
+        <h2>Login:</h2>
+        <form action="/login" method='post'>
+        <label for="email">Email:<input type="text" name='email'></label>
+        <label for="password">Password:<input type="password" name='password'></label>
+        <input type="submit" value="Holidae Inn">
+        </form>
+    </div>
+</body>
+</html>

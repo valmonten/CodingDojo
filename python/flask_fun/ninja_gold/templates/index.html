@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ninja GOLD</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='ninja.css') }}"> -->
+    <style>
+        .gold{
+            display: inline-block;
+            background-color: black;
+            color:white;
+            padding:20px;
+        }
+        .location{
+            width: 200px;
+            height:200px;
+            border:2px black solid;
+            margin: 10px;
+            display: inline-block;
+        }
+        h1, h3{
+            text-align: center;
+        }
+        button{
+            margin-left: 55px;
+        }
+        #wrapper{
+            width: 970px;
+            margin:0px, auto;
+        }
+        textarea{
+            text-align: right;
+            /* color: green; */
+        }
+        span{
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id='wrapper'>
+        <p class='gold'>Your gold:</p>
+        <p class='gold'>{{gold}}</p>
+        <div class='cow'>
+            <div class="location">
+                <h1>Farm</h1>
+                <h3>Earns 10-20 gold</h3>
+                <form action="/process_money" method="POST">
+                    <button type="submit" value="farm" name='location'>Find gold!</button>
+                </form>
+            </div>
+            <div class="location">
+                <h1>Casino</h1>
+                <h3>Earns 0-50 gold</h3>
+                <form action="/process_money" method="POST">
+                    <button type="submit" value="casino" name='location'>Find gold!</button>
+                </form>
+            </div>
+            <div class="location">
+                <h1>House</h1>
+                <h3>Earns 2-5 gold</h3>
+                <form action="/process_money" method="POST">
+                    <button type="submit" value="house" name='location'>Find gold!</button>
+                </form>
+            </div>
+            <div class="location">
+                <h1>Cave</h1>
+                <h3>Earns 5-10 gold</h3>
+                <form action="/process_money" method="POST">
+                    <button type="submit" value="cave" name='location'>Find gold!</button>
+                </form>
+            </div>
+        </div>
+        <p>Activities</p>
+        <!-- <textarea rows="10" cols="100"> -->
+            {% for element in activity %}
+                {% if 'lost' in element: %}
+                    <p style='color:red'> {{element}}</p>
+                {% else %}
+                    <p style='color:green'>{{element}}</p>
+                {% endif %}
+            {% endfor %}
+        <!-- </textarea> -->
+        <form method="POST" action="/reset">
+            <button type="submit" name='submit'>RESET</button>
+    </div>
+
+</body>
+</html>

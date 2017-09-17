@@ -1,0 +1,18 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.gold{
+    display: inline-block;
+    padding: 20px;
+    margin:20px;
+    background-color:red;
+}
+.gold:last-of-type{
+    border:2px,solid,black;
+}
+#wrapper{
+    width:970px;
+    margin: 0px, auto;
+    background-color: black;
+}

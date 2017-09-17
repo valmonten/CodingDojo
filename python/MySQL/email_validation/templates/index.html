@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title></title>
+        <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css'/>
+    </head>
+    <body>
+        <div class='container' style='padding:1em'>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                  {% for message in messages %}
+                    <p>{{message}}</p>
+                  {% endfor %}
+                {% endif %}
+              {% endwith %}
+            <form action='/verify' method='post'>
+                <div class='row'>
+                    <div class='six columns'>
+                        <label for='email_address'>Email address:<label>
+                        <input class='u-full-width' id='name' type='text' name='email_address' placeholder='Email'>
+                        
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='tweleve columns'>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='tweleve columns'>
+                        <input class='button-primary' type='submit' value='submit'>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
