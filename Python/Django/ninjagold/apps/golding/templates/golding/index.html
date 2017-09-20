@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dont cross a ninja</title>
+    <style>
+    div{
+        display: inline-block;
+    }
+    .generate{
+        width: 200px;
+        height: 150px;
+        border: 1px solid black;
+    }
+    .center{
+        text-align: center;
+    }
+    .contain{
+        width: 900px;
+        border: 1px black solid;
+        height: 200px;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Ninja Golding</h1>
+    <p>Gold: {{request.session.gold}}</p>
+    <div class="holder">
+        <div class='generate'>
+            <h3 class="center">Farm</h3>
+            <p class="center">Earns 10-20g</p>
+            <form action="/farm" method="post" class="center">
+                    {$ csrf_token %}
+                <input type="submit" value="GOLD!">
+            </form>
+        </div>
+        <div class='generate'>
+            <h3 class="center">Cave</h3>
+            <p class="center">Earns 5-10g</p>
+            <form action="/cave" method="post" class="center">
+                    {$ csrf_token %}
+                <input type="submit" value="GOLD!">
+            </form>
+        </div>
+        <div class='generate'>
+            <h3 class="center">House</h3>
+            <p class="center">Earns 2-5g</p>
+            <form action="/house" method="post" class="center">
+                    {$ csrf_token %}
+                <input type="submit" value="GOLD!">
+            </form>
+        </div>
+        <div class='generate'>
+            <h3 class="center">Casino</h3>
+            <p class="center">Earns or loses 0-50g</p>
+            <form action="/casino" method="post" class="center">
+                    {$ csrf_token %}
+                <input type="submit" value="GOLD!">
+            </form>
+        </div>
+        <div class="contain">
+
+        </div>
+    </div>
+</body>
+</html>

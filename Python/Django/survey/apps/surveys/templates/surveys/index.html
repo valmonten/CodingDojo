@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'process' %}" method='post'>
+        {% csrf_token %}
+        {{form}}
+        <!-- Your Name: <input type="text" name="name"> 
+        Location: <select name="location">
+            <option value="Cali">Cali</option>
+            <option value="Washington">Washington</option>
+            </select>
+        Fav Language: <select name="language">
+            <option value="Java">Java</option>
+            <option value="Spanish">Spanish</option>
+            </select>  -->
+        <!-- <textarea name="comments" cols="30" rows="10"></textarea> -->
+        <input type="submit" value="Submit">     
+    </form>
+</body>
+</html>

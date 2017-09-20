@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LETS GEN SOME WORDS</title>
+</head>
+<body>
+    <h3>Random word attempt(# {{request.session.counter}})</h3>
+    <h1>{{request.session.word}}</h1>
+    <form action="generate" method="post">
+        {% csrf_token %}
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
