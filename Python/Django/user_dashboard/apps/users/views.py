@@ -6,3 +6,6 @@ from django.shortcuts import render
 # Create your views here.
 def new(request):
     return render(request, 'users/index.html')
+def show(request, name):
+    print "id is {}".format(name)
+    return render(request, 'users/show.html',{"name":name})
