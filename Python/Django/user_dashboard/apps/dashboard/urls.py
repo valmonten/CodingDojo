@@ -3,6 +3,6 @@ from . import views
 
 urlpatterns=[
 
-    url(r'^', views.dash),
+    url(r'^$', views.dash),
     
 ]

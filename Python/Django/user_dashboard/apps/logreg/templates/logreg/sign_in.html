@@ -8,7 +8,12 @@
 </head>
 <body>
     <h1>Sign in placehold</h1>
-    <form action="/dashboard/" method="post">
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{message}}</p>
+        {% endfor %}
+    {% endif %}
+    <form action="logging" method="post">
         {% csrf_token %}
         {{form}}
         <input type="submit" name="Submit">

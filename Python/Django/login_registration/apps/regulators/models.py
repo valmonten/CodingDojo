@@ -21,19 +21,24 @@ class UsersManager(models.Manager):
         except Users.DoesNotExist:
             pass
         return errors
+
+
     def login_valid(self, postData):
         em = postData['email']
         paw = postData['pw']
         
         errors = {}
+        # Tests if email exists
         try:
             trying = Users.objects.get(email=postData['email'])
         except Users.DoesNotExist:
             errors['email'] = "Email password combo does not exist"
             return errors
-        a = Users.objects.get(email='em').pw 
-        if bcrypt.checkpw(paw.encode(), a):
-            request.session['log_id'] = Users.objects.get(email=em).id
+
+        # Tests if password of that email matches password given
+        a = Users.objects.get(email=em).pw 
+        if bcrypt.checkpw(paw.encode(), a.encode()):
+            pass
         else:
             errors['password'] = "Email password combo does not exist"
         return errors                        

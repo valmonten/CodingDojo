@@ -7,6 +7,12 @@
     <title>SUCCESS</title>
 </head>
 <body>
-    <h1>SUCCESS! WELCOme, </h1>
+    <h1>SUCCESS! WELCOme, {{request.session.fname}}</h1>
+    {% if request.session.path == "Log path" %}
+    <h3>You successfully logged in</h3>
+    {% endif %}
+    {% if request.session.path == "Reg path" %}
+    <h3>You successfully registered</h3>
+    {% endif %}
 </body>
 </html>
