@@ -6,6 +6,9 @@ from .forms import *
 from .models import *
 from django.contrib import messages
 import bcrypt
+import logging
+
+logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # Create your views here.
 def home(request):
@@ -23,16 +26,25 @@ def show_reg(request):
         "formy": Register_forms,
     }
     return render(request, 'logreg/register.html', context)
+def session_setting(request):
+    request.session['log_id'] = Users.objects.get(email=request.session['email']).id
+    request.session['fname'] = Users.objects.get(email=request.session['email']).fname
+    request.session['access'] = Users.objects.get(email=request.session['email']).access
 
 def sign_in(request):
     errors = Users.objects.login_valid(request.POST)
     em = request.POST['email']
+    
     if len(errors):
         for tag, error in errors.iteritems():
             messages.error(request, error, extra_tags=tag)
         return redirect ('/sign_in')
-    request.session['log_id'] = Users.objects.get(email=em).id
-    request.session['fname'] = Users.objects.get(email=em).fname
+    request.session['email'] = em
+    session_setting(request)
+  
+    import pdb; pdb.set_trace
+    if request.session['access']=="Admin":
+        return redirect('/dashboard/admin')
     request.session['path'] = "Log path"
     return redirect('/dashboard')
 
@@ -50,4 +62,9 @@ def register(request):
         Users.objects.create(fname=request.POST['fname'], lname=request.POST['lname'], email=request.POST['email'], pw=hash1)
         request.session['path']= "Reg path"
         request.session['fname'] = request.POST['fname']
+        em = request.POST['email']
+        request.session['access'] = Users.objects.get(email=em).access
+        abc = Users.objects.get(email=em).id
+        request.session['log_id'] = abc
+
     return redirect('/dashboard')
