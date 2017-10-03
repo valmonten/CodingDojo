@@ -5,6 +5,10 @@ from django.shortcuts import render, redirect
 
 import random, time
 
+import pygame
+from pygame.locals import *
+
+pygame.init()
 # Create your views here.
 def index(request):
     if not request.session.get('gold'):
@@ -17,6 +21,7 @@ def farm(request):
     rando=random.randint(10,20)
     request.session['gold']+=rando
     request.session['activity'].append("You earned "+str(rando)+" gold from the farm! on "+time.strftime('%c'))
+    
     return redirect('/')
 
 def cave(request):
