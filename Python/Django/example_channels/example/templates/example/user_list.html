@@ -2,7 +2,7 @@
 
 {% block content %}
   <a href="{% url 'example:log_out' %}">Log out</a>
-  <br>
+  <div class='right'>
   <ul>
     {% for user in users %}
       <!-- NOTE: We escape HTML to prevent XSS attacks. -->
@@ -11,6 +11,7 @@
       </li>
     {% endfor %}
   </ul>
+</div>
 {% endblock content %}
 
 {% block script %}
