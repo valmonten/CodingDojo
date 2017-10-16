@@ -17,6 +17,7 @@ def user_list(request):
     the performance of this code!
     """
     users = User.objects.select_related('logged_in_user')
+    
     for user in users:
         user.status = 'Online' if hasattr(user, 'logged_in_user') else 'Offline'
     return render(request, 'example/user_list.html', {'users': users})
