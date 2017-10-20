@@ -1,0 +1,8 @@
+C:\Users\valmo\OneDrive\Dojo\C#\Wizard, Ninja, Samurai\bin\Debug\netcoreapp1.1\Wizard, Ninja, Samurai.deps.json
+C:\Users\valmo\OneDrive\Dojo\C#\Wizard, Ninja, Samurai\bin\Debug\netcoreapp1.1\Wizard, Ninja, Samurai.runtimeconfig.json
+C:\Users\valmo\OneDrive\Dojo\C#\Wizard, Ninja, Samurai\bin\Debug\netcoreapp1.1\Wizard, Ninja, Samurai.runtimeconfig.dev.json
+C:\Users\valmo\OneDrive\Dojo\C#\Wizard, Ninja, Samurai\bin\Debug\netcoreapp1.1\Wizard, Ninja, Samurai.dll
+C:\Users\valmo\OneDrive\Dojo\C#\Wizard, Ninja, Samurai\bin\Debug\netcoreapp1.1\Wizard, Ninja, Samurai.pdb
+C:\Users\valmo\OneDrive\Dojo\C#\Wizard, Ninja, Samurai\obj\Debug\netcoreapp1.1\Wizard, Ninja, Samurai.AssemblyInfo.cs
+C:\Users\valmo\OneDrive\Dojo\C#\Wizard, Ninja, Samurai\obj\Debug\netcoreapp1.1\Wizard, Ninja, Samurai.dll
+C:\Users\valmo\OneDrive\Dojo\C#\Wizard, Ninja, Samurai\obj\Debug\netcoreapp1.1\Wizard, Ninja, Samurai.pdb
