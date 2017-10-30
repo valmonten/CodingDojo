@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Trail!</title>
+</head>
+<body>
+    <a href="/">Go Home</a>
+    <h1>Add A New Trail</h1>
+    <form action="/addingtrail/" method="post">
+    <label>Trail Name: <input type="text" name="TrailName"></label>
+    <label>Description: <textarea name="Description" id="" cols="30" rows="10"></textarea></label>
+    <label>Trail Length: <input type="text" name="TrailLength"></label>
+    <label>Elevation Change: <input type="text" name="ElevationChange"></label>
+    <label>Longitude and Latitude: <input type="text" name="long"><input type="text" name="lat"></label>
+    <input type="submit" value="Create Record!">
+    </form>
+</body>
+</html>

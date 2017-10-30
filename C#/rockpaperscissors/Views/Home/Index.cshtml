@@ -1,0 +1,21 @@
+﻿<html>
+    <head>
+        <title>RPS</title>
+    </head>
+    <body>
+        
+        @{
+            <h1>Herro @ViewBag.oname</h1>
+            if(ViewBag.oname == null){
+                <form action="/name/" method="POST">
+                    <input name='name' type="text" placeholder="Name">
+                    <input type="submit" value="Enter">
+                </form>     
+            }
+            <h2>Youve played: @ViewBag.played games and won @ViewBag.won!</h2>
+            <form action="/reset/" method="POST">
+                <input type="submit" value="Reset">
+            </form>       
+        }
+    </body>
+</html>

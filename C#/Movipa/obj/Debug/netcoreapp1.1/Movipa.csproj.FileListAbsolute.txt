@@ -1,0 +1,8 @@
+C:\Users\valmo\OneDrive\Dojo\C#\Movipa\bin\Debug\netcoreapp1.1\Movipa.deps.json
+C:\Users\valmo\OneDrive\Dojo\C#\Movipa\bin\Debug\netcoreapp1.1\Movipa.runtimeconfig.json
+C:\Users\valmo\OneDrive\Dojo\C#\Movipa\bin\Debug\netcoreapp1.1\Movipa.runtimeconfig.dev.json
+C:\Users\valmo\OneDrive\Dojo\C#\Movipa\bin\Debug\netcoreapp1.1\Movipa.dll
+C:\Users\valmo\OneDrive\Dojo\C#\Movipa\bin\Debug\netcoreapp1.1\Movipa.pdb
+C:\Users\valmo\OneDrive\Dojo\C#\Movipa\obj\Debug\netcoreapp1.1\Movipa.AssemblyInfo.cs
+C:\Users\valmo\OneDrive\Dojo\C#\Movipa\obj\Debug\netcoreapp1.1\Movipa.dll
+C:\Users\valmo\OneDrive\Dojo\C#\Movipa\obj\Debug\netcoreapp1.1\Movipa.pdb

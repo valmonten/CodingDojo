@@ -1,0 +1,8 @@
+C:\Users\valmo\OneDrive\Dojo\C#\datetiming\bin\Debug\netcoreapp1.1\datetiming.deps.json
+C:\Users\valmo\OneDrive\Dojo\C#\datetiming\bin\Debug\netcoreapp1.1\datetiming.runtimeconfig.json
+C:\Users\valmo\OneDrive\Dojo\C#\datetiming\bin\Debug\netcoreapp1.1\datetiming.runtimeconfig.dev.json
+C:\Users\valmo\OneDrive\Dojo\C#\datetiming\bin\Debug\netcoreapp1.1\datetiming.dll
+C:\Users\valmo\OneDrive\Dojo\C#\datetiming\bin\Debug\netcoreapp1.1\datetiming.pdb
+C:\Users\valmo\OneDrive\Dojo\C#\datetiming\obj\Debug\netcoreapp1.1\datetiming.AssemblyInfo.cs
+C:\Users\valmo\OneDrive\Dojo\C#\datetiming\obj\Debug\netcoreapp1.1\datetiming.dll
+C:\Users\valmo\OneDrive\Dojo\C#\datetiming\obj\Debug\netcoreapp1.1\datetiming.pdb

@@ -10,9 +10,10 @@ namespace first_mvc.Controllers
     {
         [HttpGet]
         [Route("")]
-        public IActionResult Index()
+        public string Index()
         {
-            return View();
+            System.Console.WriteLine("Hello");
+            return "Hello mundo";
         }
 
         public IActionResult About()

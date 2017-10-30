@@ -1,0 +1,8 @@
+C:\Users\valmo\OneDrive\Dojo\C#\dojosurvey\bin\Debug\netcoreapp1.1\dojosurvey.deps.json
+C:\Users\valmo\OneDrive\Dojo\C#\dojosurvey\bin\Debug\netcoreapp1.1\dojosurvey.runtimeconfig.json
+C:\Users\valmo\OneDrive\Dojo\C#\dojosurvey\bin\Debug\netcoreapp1.1\dojosurvey.runtimeconfig.dev.json
+C:\Users\valmo\OneDrive\Dojo\C#\dojosurvey\bin\Debug\netcoreapp1.1\dojosurvey.dll
+C:\Users\valmo\OneDrive\Dojo\C#\dojosurvey\bin\Debug\netcoreapp1.1\dojosurvey.pdb
+C:\Users\valmo\OneDrive\Dojo\C#\dojosurvey\obj\Debug\netcoreapp1.1\dojosurvey.AssemblyInfo.cs
+C:\Users\valmo\OneDrive\Dojo\C#\dojosurvey\obj\Debug\netcoreapp1.1\dojosurvey.dll
+C:\Users\valmo\OneDrive\Dojo\C#\dojosurvey\obj\Debug\netcoreapp1.1\dojosurvey.pdb

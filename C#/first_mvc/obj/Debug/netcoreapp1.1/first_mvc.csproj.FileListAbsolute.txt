@@ -1,0 +1,8 @@
+C:\Users\valmo\OneDrive\Dojo\C#\first_mvc\bin\Debug\netcoreapp1.1\first_mvc.deps.json
+C:\Users\valmo\OneDrive\Dojo\C#\first_mvc\bin\Debug\netcoreapp1.1\first_mvc.runtimeconfig.json
+C:\Users\valmo\OneDrive\Dojo\C#\first_mvc\bin\Debug\netcoreapp1.1\first_mvc.runtimeconfig.dev.json
+C:\Users\valmo\OneDrive\Dojo\C#\first_mvc\bin\Debug\netcoreapp1.1\first_mvc.dll
+C:\Users\valmo\OneDrive\Dojo\C#\first_mvc\bin\Debug\netcoreapp1.1\first_mvc.pdb
+C:\Users\valmo\OneDrive\Dojo\C#\first_mvc\obj\Debug\netcoreapp1.1\first_mvc.AssemblyInfo.cs
+C:\Users\valmo\OneDrive\Dojo\C#\first_mvc\obj\Debug\netcoreapp1.1\first_mvc.dll
+C:\Users\valmo\OneDrive\Dojo\C#\first_mvc\obj\Debug\netcoreapp1.1\first_mvc.pdb

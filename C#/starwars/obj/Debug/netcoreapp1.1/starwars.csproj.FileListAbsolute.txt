@@ -1,0 +1,8 @@
+C:\Users\valmo\OneDrive\Dojo\C#\starwars\bin\Debug\netcoreapp1.1\starwars.deps.json
+C:\Users\valmo\OneDrive\Dojo\C#\starwars\bin\Debug\netcoreapp1.1\starwars.runtimeconfig.json
+C:\Users\valmo\OneDrive\Dojo\C#\starwars\bin\Debug\netcoreapp1.1\starwars.runtimeconfig.dev.json
+C:\Users\valmo\OneDrive\Dojo\C#\starwars\bin\Debug\netcoreapp1.1\starwars.dll
+C:\Users\valmo\OneDrive\Dojo\C#\starwars\bin\Debug\netcoreapp1.1\starwars.pdb
+C:\Users\valmo\OneDrive\Dojo\C#\starwars\obj\Debug\netcoreapp1.1\starwars.AssemblyInfo.cs
+C:\Users\valmo\OneDrive\Dojo\C#\starwars\obj\Debug\netcoreapp1.1\starwars.dll
+C:\Users\valmo\OneDrive\Dojo\C#\starwars\obj\Debug\netcoreapp1.1\starwars.pdb

@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Datetime plz</title>        
+    </head>
+    <body>
+        <h1>Date time is:</h1>
+        
+        @{
+            DateTime rightnow = DateTime.Now;
+            <p>@rightnow.ToString("MMMM dd, yyyy")</p>
+            <p>@rightnow.ToString("h:m:s tt")</p>
+            
+        }
+    </body>
+</html>

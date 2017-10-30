@@ -1,0 +1,8 @@
+C:\Users\valmo\OneDrive\Dojo\C#\rando\bin\Debug\netcoreapp1.1\rando.deps.json
+C:\Users\valmo\OneDrive\Dojo\C#\rando\bin\Debug\netcoreapp1.1\rando.runtimeconfig.json
+C:\Users\valmo\OneDrive\Dojo\C#\rando\bin\Debug\netcoreapp1.1\rando.runtimeconfig.dev.json
+C:\Users\valmo\OneDrive\Dojo\C#\rando\bin\Debug\netcoreapp1.1\rando.dll
+C:\Users\valmo\OneDrive\Dojo\C#\rando\bin\Debug\netcoreapp1.1\rando.pdb
+C:\Users\valmo\OneDrive\Dojo\C#\rando\obj\Debug\netcoreapp1.1\rando.AssemblyInfo.cs
+C:\Users\valmo\OneDrive\Dojo\C#\rando\obj\Debug\netcoreapp1.1\rando.dll
+C:\Users\valmo\OneDrive\Dojo\C#\rando\obj\Debug\netcoreapp1.1\rando.pdb
