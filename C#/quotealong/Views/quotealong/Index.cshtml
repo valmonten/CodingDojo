@@ -1,0 +1,33 @@
+<main>
+<h1>Hi</h1>
+<form action="author/add/" method="post">
+    <input type="text" name="name">
+    <input type="submit" value="Submit">
+</form>
+<h4>Quotes</h4>
+<form action="/quote/add/" method="post">
+    <label>Quote: <input type="text" name="quote"></label>
+    <label>Meta: <input type="text" name="meta"></label>
+    <label>Author: 
+    <select name="authorid">
+        @foreach(var author in ViewBag.people)
+        {
+        <option value="@author.id">@author.name</option>
+        }
+    </select></label>
+    <label>Category: 
+    <select name="categoryid">
+        @foreach(var category in ViewBag.categories)
+        {
+        <option value="@category.id">@category.name</option>
+        }
+    </select></label>
+    <input type="submit" value="Submit">
+</form>
+<ul>
+    @foreach(var author in ViewBag.people)
+    {
+        <li>@author.name</li>
+    }
+</ul>
+</main>

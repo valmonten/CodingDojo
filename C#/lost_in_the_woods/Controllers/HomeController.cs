@@ -3,37 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using lost_in_the_woods.Factory;
+using lost_in_the_woods.Models;
 
 namespace lost_in_the_woods.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly TrailFactory userFactory;
-        public HomeController()
-        {
-            userFactory = new UserFactory();
-        }
         [HttpGet]
         [Route("/")]
         public IActionResult Index()
         {
+
             return View();
         }
         [HttpGet]
-        [Route("/addtrail/")]
-        public IActionResult About()
+        [Route("/newtrail/")]
+        public IActionResult NewTrail()
         {
             
 
             return View();
         }
         [HttpPost]
-        [Route("/addingtrail/")]
-        public IActionResult Contact()
+        [Route("/addnewtrail/")]
+        public IActionResult AddNewTrail(TrailsViewModel trail)
         {
-
-            return RedirectToAction("Index");
+            TryValidateModel(trail);
+            if(ModelState.IsValid)
+            {
+                // put into database
+                return RedirectToAction("Index");
+            }
+            // throw error messages
+            return RedirectToAction("NewTrail");
         }
 
         public IActionResult Error()

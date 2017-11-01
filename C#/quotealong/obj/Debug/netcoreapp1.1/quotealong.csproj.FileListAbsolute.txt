@@ -1,0 +1,8 @@
+C:\Users\valmo\OneDrive\Dojo\C#\quotealong\bin\Debug\netcoreapp1.1\quotealong.deps.json
+C:\Users\valmo\OneDrive\Dojo\C#\quotealong\bin\Debug\netcoreapp1.1\quotealong.runtimeconfig.json
+C:\Users\valmo\OneDrive\Dojo\C#\quotealong\bin\Debug\netcoreapp1.1\quotealong.runtimeconfig.dev.json
+C:\Users\valmo\OneDrive\Dojo\C#\quotealong\obj\Debug\netcoreapp1.1\quotealong.AssemblyInfo.cs
+C:\Users\valmo\OneDrive\Dojo\C#\quotealong\bin\Debug\netcoreapp1.1\quotealong.dll
+C:\Users\valmo\OneDrive\Dojo\C#\quotealong\bin\Debug\netcoreapp1.1\quotealong.pdb
+C:\Users\valmo\OneDrive\Dojo\C#\quotealong\obj\Debug\netcoreapp1.1\quotealong.dll
+C:\Users\valmo\OneDrive\Dojo\C#\quotealong\obj\Debug\netcoreapp1.1\quotealong.pdb

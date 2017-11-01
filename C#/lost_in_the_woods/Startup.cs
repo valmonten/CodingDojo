@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using lost_in_the_woods.Models;
+using Microsoft.EntityFrameworkCore.Extensions;
+using Microsoft.EntityFrameworkCore;
 
 namespace lost_in_the_woods
 {
@@ -28,6 +31,7 @@ namespace lost_in_the_woods
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            services.AddDbContext<lost_in_the_woodsContext>(options => options.UseMySQL(Configuration["DBInfo:ConnectionString"]));
             services.AddMvc();
         }
 
