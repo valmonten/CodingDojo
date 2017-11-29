@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Success!! Welcome!!</h1>
+    <a href="/logout/">Log Out Here</a>
+    <form action="/transact/" method="post">
+        <input type="text" name="amount">
+        <input type="submit" value="Submit">
+    </form>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+        @{
+            if(ViewBag.isdata)
+            {
+                foreach(var trans in ViewBag.transactions)
+                {
+                    <tr>
+                        <td>$@trans.amount</td>
+                        <td>@trans.tdate</td>
+                    </tr>
+                }
+            }
+            
+        }
+    </table>
+</body>
+</html>

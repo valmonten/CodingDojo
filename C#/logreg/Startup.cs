@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using logreg.Models;
+using MySQL.Data.EntityFrameworkCore.Extensions;
 
 namespace logreg
 {
@@ -30,6 +32,7 @@ namespace logreg
             // Add framework services.
             services.AddMvc();
             services.AddSession();
+            services.AddDbContext<logregContext>(options => options.UseMySQL(Configuration["DBInfo:ConnectionString"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

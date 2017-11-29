@@ -1,0 +1,8 @@
+C:\Users\valmo\OneDrive\Dojo\C#\hashalgo\bin\Debug\netcoreapp1.1\hashalgo.deps.json
+C:\Users\valmo\OneDrive\Dojo\C#\hashalgo\bin\Debug\netcoreapp1.1\hashalgo.runtimeconfig.json
+C:\Users\valmo\OneDrive\Dojo\C#\hashalgo\bin\Debug\netcoreapp1.1\hashalgo.runtimeconfig.dev.json
+C:\Users\valmo\OneDrive\Dojo\C#\hashalgo\obj\Debug\netcoreapp1.1\hashalgo.AssemblyInfo.cs
+C:\Users\valmo\OneDrive\Dojo\C#\hashalgo\bin\Debug\netcoreapp1.1\hashalgo.dll
+C:\Users\valmo\OneDrive\Dojo\C#\hashalgo\bin\Debug\netcoreapp1.1\hashalgo.pdb
+C:\Users\valmo\OneDrive\Dojo\C#\hashalgo\obj\Debug\netcoreapp1.1\hashalgo.dll
+C:\Users\valmo\OneDrive\Dojo\C#\hashalgo\obj\Debug\netcoreapp1.1\hashalgo.pdb

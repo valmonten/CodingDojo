@@ -8,4 +8,7 @@ dotnet add package System.Data.SqlClient -v 4.1.0-*
 Entity Framework
 dotnet add package MySql.Data.EntityFrameworkCore -v 7.0.7-*
 
+Identity
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore -v 1.0.0
+
 

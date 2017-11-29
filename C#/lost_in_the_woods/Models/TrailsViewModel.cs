@@ -1,8 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 namespace lost_in_the_woods.Models
 {
-    public class TrailsViewModel : BaseEntity
+    public class TrailViewModel : BaseEntity
     {
+        public int idTrail {get;set;}
         [Required]
         public string name {get;set;}
         public string description {get;set;}

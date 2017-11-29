@@ -1,0 +1,10 @@
+C:\Users\valmo\OneDrive\Dojo\C#\identity\bin\Debug\netcoreapp1.1\identity.db
+C:\Users\valmo\OneDrive\Dojo\C#\identity\bin\Debug\netcoreapp1.1\identity.deps.json
+C:\Users\valmo\OneDrive\Dojo\C#\identity\bin\Debug\netcoreapp1.1\identity.runtimeconfig.json
+C:\Users\valmo\OneDrive\Dojo\C#\identity\bin\Debug\netcoreapp1.1\identity.runtimeconfig.dev.json
+C:\Users\valmo\OneDrive\Dojo\C#\identity\bin\Debug\netcoreapp1.1\identity.dll
+C:\Users\valmo\OneDrive\Dojo\C#\identity\bin\Debug\netcoreapp1.1\identity.pdb
+C:\Users\valmo\OneDrive\Dojo\C#\identity\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
+C:\Users\valmo\OneDrive\Dojo\C#\identity\obj\Debug\netcoreapp1.1\identity.AssemblyInfo.cs
+C:\Users\valmo\OneDrive\Dojo\C#\identity\obj\Debug\netcoreapp1.1\identity.dll
+C:\Users\valmo\OneDrive\Dojo\C#\identity\obj\Debug\netcoreapp1.1\identity.pdb

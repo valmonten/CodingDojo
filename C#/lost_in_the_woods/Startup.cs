@@ -10,6 +10,8 @@ using Microsoft.Extensions.Logging;
 using lost_in_the_woods.Models;
 using Microsoft.EntityFrameworkCore.Extensions;
 using Microsoft.EntityFrameworkCore;
+using MySQL.Data.EntityFrameworkCore.Extensions;
+
 
 namespace lost_in_the_woods
 {

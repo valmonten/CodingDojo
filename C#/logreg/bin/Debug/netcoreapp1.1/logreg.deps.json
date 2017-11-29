@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1",
-    "signature": "e6a5d6420cb469413d57a6910acdc5f5c10c3f81"
+    "signature": "f0303b54bcd8280c2bf959dd3a001f7df3bfe203"
   },
   "compilationOptions": {
     "defines": [
@@ -31,6 +31,7 @@
           "Microsoft.NETCore.App": "1.1.2",
           "Microsoft.VisualStudio.Web.BrowserLink": "1.1.2",
           "MySql.Data": "7.0.7-m61",
+          "MySql.Data.EntityFrameworkCore": "7.0.7-m61",
           "System.Data.SqlClient": "4.1.0"
         },
         "runtime": {
@@ -737,6 +738,40 @@
           "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll": {}
         }
       },
+      "microsoft.entityframeworkcore/1.1.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "1.1.2",
+          "Microsoft.Extensions.DependencyInjection": "1.1.1",
+          "Microsoft.Extensions.Logging": "1.1.2",
+          "NETStandard.Library": "1.6.1",
+          "Remotion.Linq": "2.2.0-alpha-001",
+          "System.Collections.Immutable": "1.3.0",
+          "System.ComponentModel.Annotations": "4.3.0",
+          "System.Interactive.Async": "3.1.1",
+          "System.Linq.Queryable": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
+        }
+      },
+      "microsoft.entityframeworkcore.relational/1.1.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.3.0",
+          "Microsoft.EntityFrameworkCore": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.Data.Common": "4.3.0",
+          "System.Diagnostics.DiagnosticSource": "4.3.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        }
+      },
       "microsoft.extensions.caching.abstractions/1.1.2": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "1.1.1",
@@ -1137,7 +1172,7 @@
           "System.ComponentModel.Annotations": "4.3.0",
           "System.ComponentModel.Primitives": "4.3.0",
           "System.ComponentModel.TypeConverter": "4.3.0",
-          "System.Data.Common": "4.1.0",
+          "System.Data.Common": "4.3.0",
           "System.Data.SqlClient": "4.1.0",
           "System.Diagnostics.Process": "4.3.0",
           "System.Diagnostics.TextWriterTraceListener": "4.0.0",
@@ -1163,6 +1198,26 @@
         },
         "compile": {
           "lib/netstandard1.6/MySql.Data.dll": {}
+        }
+      },
+      "mysql.data.entityframeworkcore/7.0.7-m61": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "1.1.0",
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.0",
+          "Microsoft.Extensions.Caching.Memory": "1.1.2",
+          "Microsoft.Extensions.DependencyInjection": "1.1.1",
+          "Microsoft.Extensions.Logging": "1.1.2",
+          "MySql.Data": "7.0.7-m61",
+          "NETStandard.Library": "1.6.1",
+          "Remotion.Linq": "2.2.0-alpha-001",
+          "System.Collections.Immutable": "1.3.0",
+          "System.Interactive.Async": "3.1.1"
+        },
+        "runtime": {
+          "lib/netstandard1.6/MySql.Data.EntityFrameworkCore.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6/MySql.Data.EntityFrameworkCore.dll": {}
         }
       },
       "newtonsoft.json/9.0.1": {
@@ -1195,6 +1250,27 @@
         },
         "compile": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "remotion.linq/2.2.0-alpha-001": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Linq.Queryable": "4.3.0",
+          "System.ObjectModel": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Remotion.Linq.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.0/Remotion.Linq.dll": {}
         }
       },
       "runtime.native.system.data.sqlclient.sni/4.0.0": {
@@ -1287,7 +1363,7 @@
           "ref/netstandard1.5/System.ComponentModel.TypeConverter.dll": {}
         }
       },
-      "system.data.common/4.1.0": {
+      "system.data.common/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
           "System.Globalization": "4.3.0",
@@ -1311,7 +1387,7 @@
           "Microsoft.Win32.Primitives": "4.3.0",
           "System.Collections": "4.3.0",
           "System.Collections.Concurrent": "4.3.0",
-          "System.Data.Common": "4.1.0",
+          "System.Data.Common": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
           "System.Diagnostics.DiagnosticSource": "4.3.1",
           "System.Globalization": "4.3.0",
@@ -1424,6 +1500,17 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Diagnostics.TraceSource.dll": {}
+        }
+      },
+      "system.interactive.async/3.1.1": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Interactive.Async.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/System.Interactive.Async.dll": {}
         }
       },
       "system.io.pipes/4.0.0": {
@@ -3495,6 +3582,20 @@
       "path": "microsoft.dotnet.platformabstractions/1.1.2",
       "hashPath": "microsoft.dotnet.platformabstractions.1.1.2.nupkg.sha512"
     },
+    "microsoft.entityframeworkcore/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S00vr6pLeoCMbm1PsXNZIceCAA/TUX83W3f2PcLFLGrx2QnGo5aqhtYjHvBhOVKJXZmt52EKEdORoTZVZ/swww==",
+      "path": "microsoft.entityframeworkcore/1.1.0",
+      "hashPath": "microsoft.entityframeworkcore.1.1.0.nupkg.sha512"
+    },
+    "microsoft.entityframeworkcore.relational/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5LkSh1GHK/ZbI/2N6YxyofFKaAVe5/RBN38G6UQzOQVgfJxzucpJVyZt1mGHBkJ4yTlr4WQS9Wr3Ppa5X0opbw==",
+      "path": "microsoft.entityframeworkcore.relational/1.1.0",
+      "hashPath": "microsoft.entityframeworkcore.relational.1.1.0.nupkg.sha512"
+    },
     "microsoft.extensions.caching.abstractions/1.1.2": {
       "type": "package",
       "serviceable": true,
@@ -3712,12 +3813,26 @@
       "path": "mysql.data/7.0.7-m61",
       "hashPath": "mysql.data.7.0.7-m61.nupkg.sha512"
     },
+    "mysql.data.entityframeworkcore/7.0.7-m61": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pWznDa58vHSsC3IIQaW6MvjC4bVJoZiKh44y6IwHhUfqrc476RCjgz7+Be2fNouWVG9hSbjm/9o9W/glMyKdbw==",
+      "path": "mysql.data.entityframeworkcore/7.0.7-m61",
+      "hashPath": "mysql.data.entityframeworkcore.7.0.7-m61.nupkg.sha512"
+    },
     "newtonsoft.json/9.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-CF2aNxc9POF5kS6FVXIP/FoaXC8n2Rxs8+EolwuAggdINbQbj0UmKwjBAWfBGe7ozsUPwxr7oiWFPzzHSeANiw==",
       "path": "newtonsoft.json/9.0.1",
       "hashPath": "newtonsoft.json.9.0.1.nupkg.sha512"
+    },
+    "remotion.linq/2.2.0-alpha-001": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6pyY0UF9CBLvOxOkL++nfq1w0adXn6cr3dUSxOYvTNaJ3P5MHh+lQFpqeKA8mJW5eLEso1kXCZ7dKKfPMXTVxQ==",
+      "path": "remotion.linq/2.2.0-alpha-001",
+      "hashPath": "remotion.linq.2.2.0-alpha-001.nupkg.sha512"
     },
     "runtime.native.system.data.sqlclient.sni/4.0.0": {
       "type": "package",
@@ -3768,12 +3883,12 @@
       "path": "system.componentmodel.typeconverter/4.3.0",
       "hashPath": "system.componentmodel.typeconverter.4.3.0.nupkg.sha512"
     },
-    "system.data.common/4.1.0": {
+    "system.data.common/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-InaSon3rlSz4nxgGAgiel7zlPxMfMwVl8SyXDzTWXh/p7k58EctICjlHNPVTqP2RmpjSvDJxtsDDPSS2YeeFSg==",
-      "path": "system.data.common/4.1.0",
-      "hashPath": "system.data.common.4.1.0.nupkg.sha512"
+      "sha512": "sha512-brpQGBXvvmQilG2ejH5uepe1gzhBGfdhLERz+E43yctocdKQiu0nVjJbP04eTheSLwmHiLxvlYNMo7I/yHO9UQ==",
+      "path": "system.data.common/4.3.0",
+      "hashPath": "system.data.common.4.3.0.nupkg.sha512"
     },
     "system.data.sqlclient/4.1.0": {
       "type": "package",
@@ -3809,6 +3924,13 @@
       "sha512": "sha512-6WVCczFZKXwpWpzd/iJkYnsmWTSFFiU24Xx/YdHXBcu+nFI/ehTgeqdJQFbtRPzbrO3KtRNjvkhtj4t5/WwWsA==",
       "path": "system.diagnostics.tracesource/4.0.0",
       "hashPath": "system.diagnostics.tracesource.4.0.0.nupkg.sha512"
+    },
+    "system.interactive.async/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hZccYiIE5RS1/J9Tb/BNtosAGVggdlsJm4Ojdu+gDV0p4AIi+LUfUogMKkRacljQEJd2AG6vYzvcjhQFkqoZmw==",
+      "path": "system.interactive.async/3.1.1",
+      "hashPath": "system.interactive.async.3.1.1.nupkg.sha512"
     },
     "system.io.pipes/4.0.0": {
       "type": "package",

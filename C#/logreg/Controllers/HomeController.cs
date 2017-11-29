@@ -4,92 +4,111 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using logreg.Models;
-using DbConnection;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 
 namespace logreg.Controllers
 {
+    
     public class HomeController : Controller
     {
+        private logregContext _context;
+        public HomeController(logregContext context)
+        {
+            _context = context;
+        }
+
         [HttpGet]
         [Route("/")]
         public IActionResult Index()
         {
-            ViewBag.errors = ModelState.Values;
-            return View();
-        }
-            
-        
-        [HttpPost]
-        [Route("/create/")]
-        public IActionResult About(Register model)
-        {
-            ViewBag.errors = ModelState.Values;
-            if(ModelState.IsValid){
-                try
-                {                    
-                    DbConnector.Execute($"INSERT INTO users (first_name, last_name, email, password, created_at, updated_at) VALUES ('{model.FirstName}', '{model.LastName}', '{model.Email}', '{model.Password}', NOW(), NOW())");
-                }
-                catch
-                {
-                    ViewBag.duplicate = "That email already exists";
-                    return View("Index"); 
-                }
-
-                return RedirectToAction("Contact");
-            }
-            
-            return View("Index");
-        }
-        [HttpGet]
-        [Route("/loginland/")]
-        public IActionResult Contact()
-        {
-
+            ViewBag.isregerror = false;
+            ViewBag.isregerror2 = false;
+            ViewBag.islogerror = false;
             return View();
         }
         [HttpPost]
         [Route("/login/")]
-        public IActionResult Login(Login user)
+        public IActionResult Login(string email, string password)
         {
-            List<Dictionary<string, object>> match = DbConnector.Query($"SELECT * FROM users WHERE email='{user.Email}' and password='{user.Password}'");
-            if(match.Count>0)
+            ViewBag.isregerror = false;
+            ViewBag.isregerror2 = false;
+            Users logger = _context.users.SingleOrDefault(users => users.email == email && users.password == password);
+            if(logger!=null)
             {
-            object firstemail = match[0]["email"];
-            object firstid = match[0]["id"];
-            object firstname = match[0]["first_name"];
-            HttpContext.Session.SetString("logname", $"{firstname}");
-            HttpContext.Session.SetInt32("logid", (int)firstid);
-            HttpContext.Session.SetString("logemail", $"{firstemail}");
-            return RedirectToAction("Success");
+                ViewBag.islogerror = false;
+                // Set login session
+                HttpContext.Session.SetInt32("logid", logger.usersid);
+                return RedirectToAction("Dashboard");
+            }else{
+                // Show error
+                ViewBag.islogerror = true;
+                ViewBag.errors = "That password email combo does not exist";
             }
-            else
-            {
-                ViewBag.loginerror = "That email and password combo does not exist";
-            }
-            return View("Contact");
-        }
-        [HttpGet]
-        [Route("/success/")]
-        public IActionResult Success()
-        {
-            List<Dictionary<string, object>> messages = DbConnector.Query("SELECT * FROM messages");
-            ViewBag.messages = messages;
-            ViewBag.name = HttpContext.Session.GetString("logname");
-            return View();
+            return View("Index");
         }
         [HttpPost]
-        [Route("/addmessage/")]
-        public IActionResult Addmessage(string message)
+        [Route("/register/")]
+        public IActionResult Register(RegisterViewModel registration)
         {
-            DbConnector.Execute($"INSERT INTO messages (message, created_at, updated_at) VALUES ('{message}', NOW(), NOW())");
-            return RedirectToAction("Success");
+            ViewBag.islogerror= false;
+            TryValidateModel(registration);
+            if(ModelState.IsValid){
+                //check if user email already in db
+                Users check = _context.users.SingleOrDefault(users => users.email == registration.email);
+                if(check != null)
+                {
+                    // Throw error
+                    ViewBag.isregerror2 = true;
+                    ViewBag.isregerror = false;
+                    ViewBag.errors = "Email already exists";
+                }else{
+
+                //add to database
+                Users newuser = new Users();
+                newuser.fname = registration.fname;
+                newuser.lname = registration.lname;
+                newuser.email = registration.email;
+                newuser.password = registration.password;
+                _context.Add(newuser);
+                _context.SaveChanges();
+
+                ViewBag.isregerror2 = true;
+                ViewBag.isregerror1 = false;
+                ViewBag.errors = "SUCCESS!! Log in now!";
+                }
+            }else{
+                //Not valid so throw errors
+                ViewBag.isregerror = true;
+                ViewBag.isregerror2 =false;
+                ViewBag.errors = ModelState.Values;
+            }
+            return View("Index");
         }
         [HttpGet]
-        [Route("/logoff/")]
-        public IActionResult Logoff(){
-            HttpContext.Session.Clear();
-            return RedirectToAction("Contact");
+        [Route("/dashboard")]
+        public IActionResult Dashboard()
+        {
+            ViewBag.isdata = false;
+            //check logged in id
+            int? loggedid = HttpContext.Session.GetInt32("logid");
+            if(loggedid > 0)
+            {
+
+                return View();
+            }
+            else{
+                return RedirectToAction("Index");
+            }
+            //show trainsactions
         }
+        [HttpGet]
+        [Route("/logout/")]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index");
+        }
+        
     }
 }

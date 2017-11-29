@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='style.css' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+         $(document). ready(function (){
+            // this triggers the connection event in our server!
+            var socket  = io.connect();
+            var name = prompt("Please enter your name");
+            if(name!=null){
+                alert("Hello "+ name);
+            }
+            socket.emit("got_new_user", {thename: name});
+            socket.on("Show_user", function(data){
+                $("body").append("<h3 style='display:none;'>" + data.new_user + "</h3>");
+                $("h3").fadeIn("slow");
+
+                console.log(data.new_user+" connected to the chat room!");
+            });
+
+            // we'll write all the socket stuff after the above line!
+        })
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Woah, magic.</h1>
+</body>
+</html>
