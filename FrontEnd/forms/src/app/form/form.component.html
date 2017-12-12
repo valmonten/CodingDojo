@@ -1,0 +1,26 @@
+<form (submit)="entered()" #reg="ngForm">
+
+
+
+
+  <label>First Name: <input type="text" name="fname" required minlength="4" maxlength="10" #firstname="ngModel" [(ngModel)]="user.firstname" /></label>
+  <label>Last Name: <input type="text" name="lname" required [(ngModel)]="user.lastname" #lastname="ngModel"/></label>
+  <label>Email: <input type="email" name="email" email [(ngModel)]="user.email" #email="ngModel"/></label>
+  <label>Password: <input type="password" name="password" required minlength="10" [(ngModel)]="user.password" #password="ngModel"/></label>
+  <label>Password Confirmation: <input type="password" name="passwordconf" required validateEqual="password" [(ngModel)]="user.passwordconf" #passwordconf="ngModel" /></label>
+  <input type="submit" value="Submit" name="Submit" [disabled]="!reg.form.valid || user.password!=user.passwordconf"  />
+  <div *ngIf="!firstname.valid">
+    <p *ngIf="firstname.errors.required">First Name Is Required</p>
+    <p *ngIf="firstname.errors.minlength">The minimum length of first name is 4 characters </p>
+  </div>
+  <div *ngIf="!lastname.valid">
+    <p *ngIf="lastname.errors.required">Last Name Is Required</p>
+  </div>
+  <div *ngIf="!email.valid">
+    <p *ngIf="email.errors.email">Email Is Required In Valid Email Format</p>
+  </div>
+  <div *ngIf="!password.valid">
+    <p *ngIf="password.errors.minlength || password.errors.required">Password must be longer than 10 characters</p>
+  </div>
+  <p *ngIf="user.password!=user.passwordconf">Passwords must match</p>
+</form>

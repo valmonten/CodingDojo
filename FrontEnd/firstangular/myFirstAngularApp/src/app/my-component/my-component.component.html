@@ -1,0 +1,15 @@
+<h1>Dojo Mail!</h1>
+<table>
+  <tr>
+  <td>Email</td>
+  <td>Importance</td>
+    <td>Subject</td>
+    <td>Content</td>
+  </tr>
+  <tr *ngFor="let num of users">
+    <td>{{num.email | lowercase}}</td>
+    <td>{{num.importance}}</td>
+    <td>{{num.subject}}</td>
+    <td>{{num.content}}</td>
+  </tr>
+</table>

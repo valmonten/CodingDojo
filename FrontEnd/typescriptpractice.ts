@@ -1,0 +1,10 @@
+var myNum: number = 5;
+var myString: string = "Hello Universe";
+var myArr: number[] = [1,2,3,4];
+var myObj: object = {name: 'Bill'};
+var anythingVariable: any = "Hey"
+anythingVariable = 25;
+var arrayOne: boolean[] = [true,false,true,true];
+var arrayTwo: any[] = [1,'abc',5,true];
+myObj = {x:5, y:10};
+var MyNode = 

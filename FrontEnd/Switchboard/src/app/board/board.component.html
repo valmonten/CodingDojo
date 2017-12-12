@@ -1,0 +1,11 @@
+<span *ngFor= "let switch of switchArr; let idx = index">
+  <span *ngIf="switch.green">
+
+    <div class="on" (click)="turnoff(idx)"><p>ON</p></div>
+  </span>
+    <span *ngIf="!switch.green">
+
+    <div class="off" (click)="turnon(idx)"><p>OFF</p></div>
+  </span>
+
+</span>

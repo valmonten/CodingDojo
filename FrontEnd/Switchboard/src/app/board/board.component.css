@@ -1,0 +1,23 @@
+.on{
+    height:100px;
+    width:100px;
+    background-color: silver;
+    display:inline-block;
+    padding: 15px;
+}
+.on p{
+    background-color: green;
+    padding: 30px;
+}
+
+.off{
+    height:100px;
+    width:100px;
+    background-color: silver;
+    display:inline-block;
+    padding: 15px;
+}
+.off p{
+    background-color: red;
+    padding: 30px;
+}
